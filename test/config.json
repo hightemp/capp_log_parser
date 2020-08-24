@@ -1,0 +1,26 @@
+{
+    "oTypes": {
+        "access_83_log": "^(?P<ip>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(.*?)\\s+(.*?)\\s+\\[(?P<date>.*?)\\](?P<message>.*)$",
+        "access_443_log": "^(?P<ip>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(.*?)\\s+(.*?)\\s+\\[(?P<date>.*?)\\](?P<message>.*)$",
+        "php5_fpm": "^\\[(?P<date>.*?)\\](?P<message>.*)$",
+        "json": "^.*\"sDate\":\"(?P<date>.*?)\".*$"
+    },
+    "oFilesToTypes": {
+        "access-83.log": {
+            "sType": "access_83_log",
+            "sDateFormat": "%Y-%m-%d %H:%M:%S"
+        },
+        "access-443.log": {
+            "sType": "access_443_log",
+            "sDateFormat": "%Y-%m-%d %H:%M:%S"
+        },
+        "php5-fpm.log": {
+            "sType": "php5_fpm",
+            "sDateFormat": "%d-%B-%Y %H:%M:%S"
+        },
+        "php_err.log": {
+            "sType": "json",
+            "sDateFormat": "%Y.%m.%d %H:%M:%S"
+        }
+    }
+}
